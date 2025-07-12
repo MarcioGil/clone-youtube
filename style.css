@@ -1,58 +1,113 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/*Estilização do header*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
 
+/* HEADER */
 .header {
     display: flex;
-    max-width: 100%;
-    height: auto;
-    padding: .5rem 1rem;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #f9f9f9;
 }
 
-
-.left {
-    width: 146px;
+.header__left img {
     height: 24px;
 }
 
-.center {
-    width: 404px;
+.header__center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__center img {
+    max-width: 100%;
     height: 40px;
-    border: 1px;
 }
 
-.icones {
+.header__right {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.icone-andie {
-    max-width: 24px;
-    max-height: 24px;
+.header__right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.perfil__avatar {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
-/*Estilização do main*/
-
-.principal {
+/* MAIN */
+.main {
     display: flex;
-    vertical-align: middle;
-}
-
-.assistindo {
-    width: 952px;
-    height: 746px;
+    flex-direction: row;
     padding: 1rem;
-    top: 84px;
-    left: 75px;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.sidebar {
-    padding-top: 1rem;
+.main__video {
+    flex: 2 1 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__video img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.main__sidebar {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__sidebar img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__center {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main__video,
+    .main__sidebar {
+        flex: 1 1 100%;
+    }
 }

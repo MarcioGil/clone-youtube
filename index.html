@@ -2,36 +2,43 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Youtube</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clone do YouTube</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="left">
-            <img src="./assets/images/Left.png" alt="Logo Youtube">
+    <header class="header" role="banner">
+        <div class="header__left">
+            <a href="#" aria-label="Página inicial do YouTube">
+                <img src="./assets/images/Left.png" alt="Logo do YouTube" />
+            </a>
         </div>
-        <div class="center">
-            <img src="./assets/images/Center.png" alt="Barra de busca central">
+        <div class="header__center">
+            <img src="./assets/images/Center.png" alt="Barra de busca" />
         </div>
-        <div class="icones">
-            <img src="./assets/images/video.png" alt="Icone Video">
-            <img src="./assets/images/bell.png" alt="Icone Sino">
-            <img class="icone-andie" src="./assets/images/avatar_andie.jpg" alt="Avatar Andie">
+        <div class="header__right">
+            <button aria-label="Criar novo vídeo">
+                <img src="./assets/images/video.png" alt="Ícone de vídeo" />
+            </button>
+            <button aria-label="Notificações">
+                <img src="./assets/images/bell.png" alt="Ícone de sino" />
+            </button>
+            <button aria-label="Perfil do usuário">
+                <img class="perfil__avatar" src="./assets/images/Imagem_codando.png" alt="Foto de perfil do Márcio" />
+            </button>
         </div>
-
     </header>
-    <main class="principal">
-        <section class="assistindo">
-            <img src="./assets/images/Watching Video.png" alt="Video Assistindo">
-        </section>
-        <section class="sidebar">
-            <img src="./assets/images/Sidebar.png" alt="Sugestões de vídeos">
-        </section>
-    </main>
 
+    <main class="main" role="main">
+        <section class="main__video">
+            <img src="./assets/images/Watching Video.png" alt="Vídeo em reprodução" />
+        </section>
+        <aside class="main__sidebar">
+            <img src="./assets/images/Sidebar.png" alt="Vídeos sugeridos na barra lateral" />
+        </aside>
+    </main>
 </body>
 
 </html>
